@@ -7,3 +7,8 @@ Luego del trabajo realizado en la primera parte de este proyecto, en donde se re
 
 ## Disclaimer
 
+Este es un proyecto a nivel personal en donde quize poner en práctica el conocimiento que he adquirido relacionado al análisis de datos y analisis de texto, además de trabajar un tema que me toca de cerca que son las sustancias psicoactivas.
+
+No soy experto, ni especialista en el tema pero todo el trabajo realizado fue con la mayor entrega y esfuerzo posible.
+
+Teniendo en cuenta lo anterior 
