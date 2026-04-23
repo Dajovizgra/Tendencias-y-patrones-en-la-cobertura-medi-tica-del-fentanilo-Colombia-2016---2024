@@ -54,7 +54,7 @@ Se reemplazaron siglas como EE.UU por las palabras completas, Estados Unidos, co
 
 ## Análisis exploratorio de los datos
 
-*No solo es el lenguaje que se usa en los medios, también es el lenguaje del discurso o ideas a los que se les abren los espacios y el poder o influencia que pueden representar.
+* No solo es el lenguaje que se usa en los medios, también es el lenguaje del discurso o ideas a los que se les abren los espacios y el poder o influencia que pueden representar. *
 
 Análisis de texto:
 La siguiente parte del procesamiento del texto se hizo con la librería de python, Spacy, y consistió en eliminar palabras vacías, aquellas que no aportan nada al análisis, como por ejemplo artículos; de, que, en, un, a, etc. Se lematizaron todos los textos, eso quiere decir que las palabras fueron llevadas a su raíz (cantamos = cantar, corriendo = correr) y todas las letras fueron convertidas a minúsculas.
