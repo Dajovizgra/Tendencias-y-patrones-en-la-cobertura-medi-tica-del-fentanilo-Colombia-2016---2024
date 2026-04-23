@@ -61,13 +61,17 @@ El siguiente paso es la creación de nubes de palabras para ver cuáles son las 
 
 Aunque en la nube de palabras hecha con el cuerpo de las noticias se logran colar de manera discreta palabras como médico, medicamento y salud, si se van leyendo las palabras, de las más grandes a las más pequeñas, la impresión que queda es el reflejo de la realidad del discurso que viene predominando: Esta es una droga ilegal producida en México hecha con sintéticos traídos de China que afecta a las personas de Estados Unidos, principalmente. Una gran simplificación de un tema con varias capas de complejidad.
 
+
 <img width="1220" height="500" alt="imagen" src="https://github.com/user-attachments/assets/ceb56a42-98ec-4421-98cb-dc07bfd1e63c" />
+
 
 Las demás realidades que hacen parte de este tema tan amplio quedan ocultas para poder justificar acciones de Estados Unidos en contra de otros países en el mundo, alegando seguridad y defensa. Como lo que pasó con los aranceles económicos en contra México, Canadá y China para combatir el tráfico de fentanilo y lo más actual, el bombardeo de lanchas y embarcaciones en el Caribe y en el Pacífico para impedir la entrada de cocaína a su territorio.
 
 Haciendo un análisis de temas con todo el texto reunido, usando BERTopic (gran modelo lingüístico para procesamiento de lenguaje natural), se ven cuáles son las realidades más representadas por los medios al hablar del tema.
 
+
 <img width="950" height="260" alt="imagen" src="https://github.com/user-attachments/assets/533bdb05-05a5-45d5-bee5-78bc63688b76" />
+
 
 El tema más representado gira alrededor de las palabras México, unidos, cartel, estadounidense y Trump. Un reflejo en los medios del discurso que dicta Estados Unidos; responsabilizando a todos los demás por sus problemas de consumo, sobredosis y muerte, deshaciéndose completamente de las responsabilidades que tiene con sus habitantes.
 
@@ -85,7 +89,9 @@ El siguiente paso dentro de este análisis consistió en usar el modelo de proce
 
 Colombia, país desde donde se hace este análisis, es la locación más nombrada, le sigue Washington, luego Europa, Texas, China, Nueva York y Asia. Washington como el centro del poder y toma de decisiones en Estados Unidos, Europa como otro posible mercado para la sustancia y China - Asia como proveedor químico.
 
+
 <img width="307" height="311" alt="imagen" src="https://github.com/user-attachments/assets/b17f5987-db59-4713-88b4-516a842d5529" />
+
 
 **¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad?**
 
@@ -97,7 +103,9 @@ Donald, Manuel López Obrador y Joaquín Guzmán fueron los personajes más nomb
 
 Los pares de palabras que mayor relación tuvieron entre sí en este análisis de texto son: muerte – sobredosis, droga – sintético, cartel – Sinaloa.
 
+
 <img width="969" height="297" alt="imagen" src="https://github.com/user-attachments/assets/c6132a82-6e19-4193-98ec-b90adb93ce89" />
+
 
 Todos los aportes que ha hecho el fentanilo en ámbitos médicos quedan totalmente invisibilizados y la información que de verdad pudo haber ayudado a educar y prevenir sobre sus peligros fuera del entorno médico, quedaron sepultados sobre cientos de noticias que solo buscaron generalizar una tendencia de alarma y miedo sin tener en cuenta que el contexto colombiano, incluso el sudamericano, es diferente al de América del Norte.
 
@@ -105,7 +113,9 @@ Aunque eso no asegura que Sudamérica esté el todo blindada contra una posible 
 
 El medio que más publicó fue El tiempo, 338 noticias, le siguen SEMANA con 128 noticias y el País con 118. Las 3 palabras que más usaron fueron: fentanilo, droga y Estados Unidos.
 
+
 <img width="1022" height="485" alt="imagen" src="https://github.com/user-attachments/assets/33f2f0ad-b5a9-4dd6-9e3a-8489363e3000" />
+
 
 # Conclusiones
 
