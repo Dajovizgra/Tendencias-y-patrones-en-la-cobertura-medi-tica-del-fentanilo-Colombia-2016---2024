@@ -89,7 +89,7 @@ Colombia, país desde donde se hace este análisis, es la locación más nombrad
 
 <img width="307" height="311" alt="imagen" src="https://github.com/user-attachments/assets/b17f5987-db59-4713-88b4-516a842d5529" />
 
-** ¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad? **
+** ¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad? 
 
 La ONU (Organización de las Naciones Unidas) y los CDC (Centros para el Control y la Prevención de Enfermedades) de Estados Unidos fueron las organizaciones más nombradas dentro de la información recolectada. En primer lugar, una organización que ha estado de cerca en la fiscalización y restricción de las drogas ilegales en el mundo y en segundo lugar, la agencia nacional de salud pública de Estados Unidos.
 
