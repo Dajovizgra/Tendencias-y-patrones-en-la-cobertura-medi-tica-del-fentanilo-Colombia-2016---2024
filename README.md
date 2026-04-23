@@ -10,17 +10,17 @@ No soy experto, ni especialista en el tema de datos pero, todo el trabajo realiz
 Teniendo en cuenta lo anterior, invito a aquellas personas que tienen más conocimientos en este tema a que revisen el proyecto y que lo complementen con todo lo que a mi se me pudo haber pasado o que por favor corrijan si me equivoqué en algo. He compartido absolutamente todos los archivos relacionados a este proyecto con ese objetivo, para que siga siendo trabajado y mejorado por cualquier persona que quiera.
 
 
-## Contexto de la segunda parte del proyecto
+# Contexto de la segunda parte del proyecto
 
 Luego del trabajo realizado en la primera parte de este proyecto, en donde se recolectaron y se analizaron titulares de medios de comunicación en Canadá, Estados Unidos, México y Colombia con el objetivo de identificar tendencias y patrones significativos y analizar qué tipo de impacto pueden tener estas noticias en la percepción pública y el comportamiento de las personas que las consumen, esta segunda parte del proyecto se enfoca específicamente en el ecosistema mediático colombiano.
 
 
-## Objetivos del proyecto
+# Objetivos del proyecto
 
-# Objetivo principal:
+## Objetivo principal:
 Analizar el cubrimiento mediático relacionado al fentanilo entre los años 2016-2024 en Colombia..
 
-# Objetivos generales:
+## Objetivos generales:
 Identificar tendencias y patrones significativos mediante el análisis de lenguaje natural de las noticias publicadas por diversos medios en Colombia.
 
 Analizar qué tipo de impacto pueden tener estas noticias en la percepción pública.
@@ -89,7 +89,7 @@ Colombia, país desde donde se hace este análisis, es la locación más nombrad
 
 <img width="307" height="311" alt="imagen" src="https://github.com/user-attachments/assets/b17f5987-db59-4713-88b4-516a842d5529" />
 
-# ¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad?
+** ¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad? **
 
 La ONU (Organización de las Naciones Unidas) y los CDC (Centros para el Control y la Prevención de Enfermedades) de Estados Unidos fueron las organizaciones más nombradas dentro de la información recolectada. En primer lugar, una organización que ha estado de cerca en la fiscalización y restricción de las drogas ilegales en el mundo y en segundo lugar, la agencia nacional de salud pública de Estados Unidos.
 
@@ -109,7 +109,7 @@ El medio que más publicó fue El tiempo, 338 noticias, le siguen SEMANA con 128
 
 <img width="1022" height="485" alt="imagen" src="https://github.com/user-attachments/assets/33f2f0ad-b5a9-4dd6-9e3a-8489363e3000" />
 
-## Conclusiones
+# Conclusiones
 
 La falta de presencia de medios alternativos, independientes y comunitarios en el presente análisis responde a las agendas y decisiones editoriales de esos medios. Mientras que los medios con más alcance a nivel nacional y con sede en ciudades medianas y grandes fueron mucho más activos publicando noticias relacionadas al fentanilo, los medios más pequeños y con un alcance menor responden a sus contextos cercanos, en donde claramente este tema no tiene importancia dentro de sus contenidos.
 
@@ -137,18 +137,15 @@ Todos los aportes que ha hecho el fentanilo en ámbitos médicos quedan totalmen
 
 Aunque eso no asegura que Sudamérica esté el todo blindada contra una posible emergencia por consumo de fentanilo por fuera del ámbito médico, es una realidad que por ahora no está pasando. Son los medios de comunicación los que han intentado implantar esa realidad alternativa desde sus editoriales e intereses particulares.
 
-# El medio que más publicó fue el tiempo, 338 noticias, le siguen SEMANA con 128 noticias y el País con 118. Las 3 palabras que más usaron fueron: fentanilo, droga y Estados Unidos.
+** El medio que más publicó fue el tiempo, 338 noticias, le siguen SEMANA con 128 noticias y el País con 118. Las 3 palabras que más usaron fueron: fentanilo, droga y Estados Unidos. **
 
 # Bibliografía
 
-    • Boté-Vericad, J.-J.; H.-S. Afonso-Mendonça; E. Adilovic (2024). Agregadores de noticias: una
-aproximación al estado del arte sobre las consideraciones éticas en los algoritmos de recomendación.
-Documentación de las Ciencias de la Información, 47, 5-13. https://revistas.ucm.es/index.php/DCIN/article/view/90547.
+    • Boté-Vericad, J.-J.; H.-S. Afonso-Mendonça; E. Adilovic (2024). Agregadores de noticias: una aproximación al estado del arte sobre las consideraciones éticas en los algoritmos de recomendación. Documentación de las Ciencias de la Información, 47, 5-13. https://revistas.ucm.es/index.php/DCIN/article/view/90547.
     • Fletcher Richard (2023). Actitudes hacia los algoritmos y su impacto en las noticias. https://reutersinstitute.politics.ox.ac.uk/es/digital-news-report/2023/actitudes-algoritmos-impacto-noticias.
     • Riesgos de la desinformación en Colombia (2023). https://www.uniandes.edu.co/es/noticias/periodismo-y-comunicaciones/riesgos-de-la-desinformacion-en-colombia.
     • Sierra Caballero, Francisco, & Sola-Morales, Salomé. (2020). Golpes mediáticos y desinformación en la era digital. La guerra irregular en América Latina. Comunicación y sociedad, 17, e7604. Epub 27 de enero de 2021. https://doi.org/10.32870/cys.v2020.7604.
-    • López-Borrull, Alexandre (2023). “En busca de la verdad perdida: redes sociales y desinformación”.
-Anuario ThinkEPI, v. 17, e17a44. https://doi.org/10.3145/thinkepi.2023.e17a44.
+    • López-Borrull, Alexandre (2023). “En busca de la verdad perdida: redes sociales y desinformación”. Anuario ThinkEPI, v. 17, e17a44. https://doi.org/10.3145/thinkepi.2023.e17a44.
     • Cabral Brenda (2023). Manipulación de la información en medios de comunicación digitales e impresos. Instituto de Investigaciones Bibliotecológicas y de la Información Universidad Nacional Autónoma de México. https://thinkepi.scimagoepi.com/index.php/ThinkEPI/article/view/91621.
     • Calviño Vanessa (2023). La Desinformación en las Redes Sociales y el Periodismo. Artículo académico del doctorado en Ciencias de la Comunicación Social de la asignatura Industrias Culturales, impartida por el  Dr. Bladimir Cedeño Vega / Facultad de Comunicación Social de la Universidad de Panamá. https://launiversidad.up.ac.pa/node/3196.
     • Consultorio ético (2019). ¿Se está perdiendo la ética periodística por la inmediatez de la noticia?https://fundaciongabo.org/es/consultorio-etico/consulta/2140.
