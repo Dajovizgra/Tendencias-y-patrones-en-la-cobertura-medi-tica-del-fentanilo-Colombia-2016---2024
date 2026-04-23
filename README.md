@@ -54,7 +54,7 @@ Se reemplazaron siglas como EE.UU por las palabras completas, Estados Unidos, co
 
 ## Análisis exploratorio de los datos
 
-* No solo es el lenguaje que se usa en los medios, también es el lenguaje del discurso o ideas a los que se les abren los espacios y el poder o influencia que pueden representar. *
+**No solo es el lenguaje que se usa en los medios, también es el lenguaje del discurso o ideas a los que se les abren los espacios y el poder o influencia que pueden representar.**
 
 Análisis de texto:
 La siguiente parte del procesamiento del texto se hizo con la librería de python, Spacy, y consistió en eliminar palabras vacías, aquellas que no aportan nada al análisis, como por ejemplo artículos; de, que, en, un, a, etc. Se lematizaron todos los textos, eso quiere decir que las palabras fueron llevadas a su raíz (cantamos = cantar, corriendo = correr) y todas las letras fueron convertidas a minúsculas.
@@ -89,7 +89,7 @@ Colombia, país desde donde se hace este análisis, es la locación más nombrad
 
 <img width="307" height="311" alt="imagen" src="https://github.com/user-attachments/assets/b17f5987-db59-4713-88b4-516a842d5529" />
 
-** ¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad? 
+**¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad?**
 
 La ONU (Organización de las Naciones Unidas) y los CDC (Centros para el Control y la Prevención de Enfermedades) de Estados Unidos fueron las organizaciones más nombradas dentro de la información recolectada. En primer lugar, una organización que ha estado de cerca en la fiscalización y restricción de las drogas ilegales en el mundo y en segundo lugar, la agencia nacional de salud pública de Estados Unidos.
 
