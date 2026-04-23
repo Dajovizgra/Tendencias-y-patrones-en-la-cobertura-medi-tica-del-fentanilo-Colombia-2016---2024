@@ -135,7 +135,7 @@ Todos los aportes que ha hecho el fentanilo en ámbitos médicos quedan totalmen
 
 Aunque eso no asegura que Sudamérica esté el todo blindada contra una posible emergencia por consumo de fentanilo por fuera del ámbito médico, es una realidad que por ahora no está pasando. Son los medios de comunicación los que han intentado implantar esa realidad alternativa desde sus editoriales e intereses particulares.
 
-** El medio que más publicó fue el tiempo, 338 noticias, le siguen SEMANA con 128 noticias y el País con 118. Las 3 palabras que más usaron fueron: fentanilo, droga y Estados Unidos. **
+**El medio que más publicó fue el tiempo, 338 noticias, le siguen SEMANA con 128 noticias y el País con 118. Las 3 palabras que más usaron fueron: fentanilo, droga y Estados Unidos.**
 
 # Bibliografía
 
