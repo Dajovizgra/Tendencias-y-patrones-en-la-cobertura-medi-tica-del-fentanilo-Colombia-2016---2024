@@ -7,6 +7,8 @@ Este es un proyecto a nivel personal en donde quise poner en práctica el conoci
 
 No soy experto, ni especialista en el tema de datos pero, todo el trabajo realizado fue con la mayor entrega y esfuerzo posible.
 
+Sé muy bien que desde el 2024, que es hasta el año de donde se extrajo la información, hasta el 2026, fecha en donde se publica este proyecto, en un espacio de tiempo importante y son 2 años en donde probablemente se han publicado mucha más información respecto al tema. Hubiera querido publicar esto mucho tiempo antes pero cuestiones personales no me permitieron hacerlo.
+
 Teniendo en cuenta lo anterior, invito a aquellas personas que tienen más conocimientos en este tema a que revisen el proyecto y que lo complementen con todo lo que a mi se me pudo haber pasado o que por favor corrijan si me equivoqué en algo. He compartido absolutamente todos los archivos relacionados a este proyecto con ese objetivo, para que siga siendo trabajado y mejorado por cualquier persona que quiera.
 
 
@@ -59,8 +61,7 @@ La siguiente parte del procesamiento del texto se hizo con la librería de pytho
 
 El siguiente paso es la creación de nubes de palabras para ver cuáles son las que más se repiten dentro de los titulares y dentro del cuerpo de las noticias. Se repite lo que se observó en la primera parte de este ejercicio de análisis, las palabras que más se usan están relacionadas a la punitividad, la seguridad, el crimen, el negocio y la muerte.
 
-Aunque en la nube de palabras hecha con el cuerpo de las noticias se logran colar de manera discreta palabras como médico, medicamento y salud, si se van leyendo las palabras, de las más grandes a las más pequeñas, la impresión que queda es el reflejo de la realidad del discurso que viene predominando: Esta es una droga ilegal producida en México hecha con sintéticos traídos de China que afecta a las personas de Estados Unidos, principalmente. Una gran simplificación de un tema con varias capas de complejidad.
-
+Aunque en la nube de palabras hecha con el cuerpo de las noticias se logran colar de manera discreta palabras como médico, medicamento y salud, si se van leyendo las palabras, de las más grandes a las más pequeñas, la impresión que queda es el reflejo de la realidad del discurso que viene predominando: Esta es una droga ilegal producida en México y China hecha con sintéticos traídos de Asia que afecta a las personas de Estados Unidos, principalmente. Una gran simplificación de un tema con varias capas de complejidad.
 
 <img width="1220" height="500" alt="imagen" src="https://github.com/user-attachments/assets/ceb56a42-98ec-4421-98cb-dc07bfd1e63c" />
 
