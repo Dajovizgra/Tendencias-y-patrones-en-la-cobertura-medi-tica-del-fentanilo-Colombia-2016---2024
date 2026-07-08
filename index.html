@@ -74,6 +74,17 @@
             font-style: normal;
         }
 
+        .hero-title h4 {
+            text-align: center;
+            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            color: var(--text-dark);
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            margin: 0 0 1.5rem 0;
+            font-family: 'opendyslexic';
+            font-weight: bold;
+            font-style: normal;
+        }
+
         .hero-video-wrapper {
             position: relative;
             width: 100%;
@@ -96,7 +107,7 @@
             background: transparent;
             position: relative;
             z-index: 2;
-            margin: 0 2rem 1.5rem 2rem; /* arriba separado del video */
+            margin: 0 2rem 1.5rem 2rem; 
             padding: 0;
             
         }
@@ -507,6 +518,9 @@
     <div class="hero-video-wrapper">
       <div class="hero-title">
         <h1>Ecos de fentanilo</h1>
+        <h4>Tendencias y patrones en la cobertura mediática del fentanilo en Colombia entre 2016 y 2024</h4>
+        <h1>Por Sebastián Acosta Nieto</h1>
+        <h3><strong>RECOMENDACIÓN: Ver desde computador o celular con horientación vertical.</h3>
       </div>
 
       <iframe
@@ -533,12 +547,12 @@
          ==================================== -->
     <section class="disclaimer">
         <h3>Importante</h3>
-        <p>Este es un proyecto a nivel personal en donde quise poner en práctica el conocimiento que he adquirido relacionado al análisis de datos y análisis de texto, además de trabajar un tema que me toca de cerca que son las sustancias psicoactivas.</p>
+        <p>Este es un proyecto independiente desarrollado con el propósito de poner en práctica herramientas de análisis de datos y análisis textual, aplicadas a un tema de alto interés público: la forma en que los medios de comunicación han abordado el fentanilo en Colombia.</p>
 
-        <p>No soy experto, ni especialista en el tema pero, todo el trabajo realizado fue con la mayor entrega y esfuerzo posible.</p>
+        <p>La información aquí presentada fue recopilada y organizada entre 2024 y 2026, a partir de publicaciones periodísticas difundidas entre 2016 y 2024. El objetivo de este trabajo es ofrecer una lectura exploratoria sobre los discursos, énfasis y tendencias mediáticas alrededor del tema.</p>
         <p>Sé muy bien que desde el 2024, que es hasta el año de donde se extrajo la información, hasta el 2026, fecha en donde se publica este proyecto, en un espacio de tiempo importante y son 2 años en donde probablemente se han publicado mucha más información respecto al tema. Hubiera querido publicar esto mucho tiempo antes pero cuestiones personales no me permitieron hacerlo.</p>
-
-        <p>Teniendo en cuenta lo anterior, invito a aquellas personas que tienen más conocimientos en este tema a que revisen el proyecto y que lo complementen con todo aquello que a mí se me pudo haber pasado o que por favor corrijan si me equivoqué en algo. He compartido absolutamente todos los archivos relacionados a este proyecto con ese objetivo, para que siga siendo trabajado y mejorado por cualquier persona que quiera.</p>
+        <p>Este proyecto no pretende presentarse como una investigación definitiva ni cerrar la discusión. Por el contrario, busca abrir un espacio de consulta, reflexión y conversación pública. Por eso, los datos, archivos y resultados asociados se comparten de manera abierta, para que puedan ser revisados, contrastados, corregidos o complementados por personas interesadas, especialmente por quienes cuenten con mayor experiencia en el tema.</p>
+        <p>Agradezco cualquier observación, corrección o aporte que permita fortalecer este trabajo y seguir mejorando su calidad, alcance y utilidad pública.</p>
     </section>
 
     <!-- ====================================
@@ -565,6 +579,11 @@
          ==================================== -->
     <section class="text-section">
         <h2>Contexto del Fentanilo en Colombia</h2>
+        <p><strong>* ¿Qué es y cuál es el efecto del fentanilo?
+
+        “ El fentanilo y compuestos similares llamados análogos, tal como el carfentanilo, son opioides sintéticos extremadamente fuertes. El carfentanilo es considerado hasta 100 veces más potente que el fentanilo, que es de 50 a 100 veces más fuerte que la morfina. Médicamente, se usan para tratar el dolor intenso o para controlar el dolor después de una cirugía. El fentanilo se usa también para tratar a pacientes con dolor crónico que han desarrollado tolerancia a otros opioides.” – <a href>https://drugfree.org/articulo/fentanilo/</a href>.
+
+        “Los médicos pueden recetar un opioide para tratar el dolor, pero también se fabrica ilegalmente y se vende como droga callejera.” – <a href>https://kidshealth.org/es/parents/drugs-fentanyl.html </a href>.</strong></p>
         <p>Desde el 2016 existe un boom noticioso relacionado al fentanilo que tomó fuerza debido a algunas situaciones como: las emergencias generadas por consumo, sobredosis y muertes en Canadá y EE.UU. Cada una con características propias de su contexto y cultura; visibilización de los consumidores mientras se encuentran bajo el efecto de la sustancia; aumento de su presencia en el mercado ilícito; combinaciones peligrosas con otras sustancias; noticias criminales entorno a la sustancia y supuestas aperturas de nuevos mercados.</p>
     </section>
 
@@ -617,7 +636,8 @@
          SECCIÓN DE TEXTO
          ==================================== -->
     <section class="text-section">
-        <p>Teniendo todo esto en cuenta se plantea la necesidad de realizar la segunda parte de este análisis descriptivo y exploratorio desde Colombia. Pese a que no es un país que se haya visto realmente afectado por la problemática relacionada al consumo no controlado de fentanilo, se usa al aparato mediático y a la desinformación como formas de avivar el mensaje de miedo y rechazo a las drogas, especialmente hacia los usuarios y eslabones más débiles de la cadena de distribución. Se busca controlar a la gente por medio del pánico generado y a la vez se ocultan problemas más urgentes en los territorios, en todo el planeta.</p>
+        <p>Teniendo todo esto en cuenta se plantea la necesidad de realizar la segunda parte de este análisis descriptivo y exploratorio desde Colombia. Pese a que no es un país que se haya visto realmente afectado por la problemática relacionada al consumo no controlado de fentanilo, se usa al aparato mediático y a la desinformación como formas de avivar el mensaje de miedo y rechazo a las drogas, especialmente hacia las personas usuarias de drogas y eslabones más vulnerables de la cadena de distribución.</p>
+        <p>Se busca controlar a la gente por medio del pánico generado y a la vez se ocultan problemas más urgentes en los territorios, en todo el planeta como la desigualdad, falta de oferta en estrategias basadas en derechos humanos, militarización y violencia, entre otros tantos.</p>
     </section>
 
     <!-- ====================================
@@ -903,9 +923,9 @@
                 <p>Sharon D’ Medía - Colombiacheck</p>
             </a>
 
-            <a href="https://colombiacheck.com/chequeos/fiscal-francisco-barbosa-dio-dos-datos-falsos-y-uno-verdadero-sobre-incautacion-de" class="link-card" target="_blank" rel="noopener noreferrer">
-                <h3>Fiscal Francisco Barbosa dio dos datos falsos y uno verdadero sobre incautación de fentanilo en Bogotá</h3>
-                <p>Laura Natalia Cruz y María Mónica Acuña - Colombiacheck</p>
+            <a href="https://cesed.uniandes.edu.co/mas-alla-del-miedo-que-es-el-fentanilo/" class="link-card" target="_blank" rel="noopener noreferrer">
+                <h3>Más allá del miedo: ¿qué es el fentanilo? Serie de documentos temáticos sobre fentanilo.</h3>
+                <p>Centro de Estudios sobre seguridad y drogas. Universidad de Los Andes.</p>
             </a>
 
             <a href="https://portalderevistas.ufv.es/index.php/comunicacionyhombre/article/view/768" class="link-card" target="_blank" rel="noopener noreferrer">
