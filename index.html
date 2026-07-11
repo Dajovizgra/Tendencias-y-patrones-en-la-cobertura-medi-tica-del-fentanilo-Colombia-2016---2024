@@ -524,6 +524,46 @@
             padding: 1rem;
         }
     }
+
+    /* Estado inicial - invisible */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado cuando entra en vista - visible */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animaciones alternativas (opcionales) */
+
+/* Slide desde la izquierda */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+    
 </style>
 
 <!-- ====================================
@@ -553,7 +593,7 @@
     <!-- ====================================
          CÓMO SE HIZO (TEXTO PEQUEÑO)
          ==================================== -->
-    <div class="how-it-was-made">
+    <div class="how-it-was-made fade-in">
         <a href="https://github.com/Dajovizgra" target="_blank" rel="noopener noreferrer">
             <h5>Por Sebastián Acosta Nieto</h5>
         </a>          
@@ -1011,6 +1051,27 @@
             closeModal();
         }
     });
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+}, observerOptions);
+
+// Observar todos los elementos animables
+document.querySelectorAll('.fade-in, .slide-in-left, .zoom-in').forEach(element => {
+  observer.observe(element);
+});
+
+    
 </script>
 
 </body>
