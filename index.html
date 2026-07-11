@@ -1053,20 +1053,24 @@
     });
 
     const observerOptions = {
-      threshold: 0.1,
+      threshold: 0.1,  // Activa cuando el 10% del elemento es visible
       rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(entry => {
+    // Si el elemento entra en vista
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+        } 
+    // Si el elemento sale de vista
+        else {
+          entry.target.classList.remove('visible');
         }
       });
-}, observerOptions);
+    }, observerOptions);
 
-// Observar todos los elementos animables
+// Observar todos los elementos con la clase fade-in
 document.querySelectorAll('.fade-in, .slide-in-left, .zoom-in').forEach(element => {
   observer.observe(element);
 });
