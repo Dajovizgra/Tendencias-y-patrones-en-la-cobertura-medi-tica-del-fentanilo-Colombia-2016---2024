@@ -1,436 +1,1083 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- META TAGS - Información del documento -->
     <meta charset="UTF-8">
-    <!-- Define que el documento usa caracteres UTF-8 (español, acentos, etc.) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Hace que la página sea responsive en dispositivos móviles -->
-    <title>Mi Página de Contenido</title>
-    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Ecos de fentanilo</title>
 
-    <style>
-        /* ========== ESTILOS GENERALES ========== */
-        
-        /* Reset - Elimina márgenes y espacios por defecto */
-        * {
+<style>
+
+    @font-face {
+        font-family: 'PacayaMedium';
+        src: url('./Pacaya.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    
+    /* ========== VARIABLES DE COLOR ========== */
+    :root {
+        --purple-dark: #A58FCC;
+        --purple-med: #C0AEDB;
+        --purple-light: #D9CEE9;
+        --yellow: #FFD700;
+        --red: #E63946;
+        --text-dark: #1a1a1a;
+        --text-light: #f5f5f5;
+        --bg-light: #f9f9f9;
+        --white: #ffffff;
+        --border-radius: 8px;
+        --transition: all 0.3s ease;
+        --newp: #B441BD;
+    }
+
+    /* ========== RESET GLOBAL ========== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+        /* ========== SECCIÓN HERO (VIDEO PRINCIPAL) ========== */
+        .hero-section {
+            width: 100%;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            /* box-sizing asegura que el padding no suma al tamaño del elemento */
+            padding: 3rem 1rem 2rem;
+            background: linear-gradient(135deg, var(--bg-light), var(--purple-med));
         }
 
-        /* BODY - Estilos generales del cuerpo de la página */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Fuente principal - si no encuentra Segoe UI usa otras alternativas */
-            
-            /* GRADIENTE DE FONDO - Degradado diagonal morado y azul oscuro */
-            background: linear-gradient(135deg, #1a0033 0%, #0d1f1f 50%, #1a0033 100%);
-            /* 135deg = ángulo diagonal, #1a0033 = morado muy oscuro, #0d1f1f = azul oscuro */
-            
-            color: #e0e0e0;
-            /* Color del texto por defecto - gris claro */
-            line-height: 1.6;
-            /* Espacio entre líneas para mejor legibilidad */
-        }
-
-        /* ========== SECCIÓN HERO (INICIAL CON GIF) ========== */
-        
-        /* CONTENEDOR DEL HERO */
-        .hero {
-            position: relative;
-            /* Posicionamiento relativo para que los elementos internos se posicionen respecto a esto */
-            width: 100%;
-            /* Ancho completo de la pantalla */
-            height: 100vh;
-            /* Altura completa del viewport (pantalla visible) */
-            overflow: hidden;
-            /* Oculta cualquier contenido que salga del contenedor */
-            display: flex;
-            /* Usa flexbox para centrar contenido */
-            align-items: center;
-            /* Centra verticalmente */
-            justify-content: center;
-            /* Centra horizontalmente */
-        }
-
-        /* GIF DEL HERO */
-        .hero-gif {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Ajusta la imagen sin deformarla, cubriendo todo el espacio */
-            object-position: center;
-            /* Centra la imagen dentro del contenedor */
-        }
-
-        /* CONTENEDOR DEL TÍTULO DEL HERO */
-        .hero-title {
-            position: absolute;
-            /* Se posiciona sobre el GIF */
-            top: 50%;
-            left: 50%;
-            /* Estos dos valores lo colocan en el centro (sin transform sería descentrado) */
-            transform: translate(-50%, -50%);
-            /* Ajusta la posición usando el próprio tamaño del elemento */
-            text-align: center;
-            z-index: 10;
-            /* Nivel de profundidad - aparece sobre el GIF */
-        }
-
-        /* TÍTULO H1 DEL HERO */
-        .hero-title h1 {
-            font-size: clamp(2rem, 8vw, 4.5rem);
-            /* clamp = tamaño mínimo, preferido (escala con pantalla), máximo */
-            /* 2rem = mínimo, 8vw = escala con 8% del ancho de pantalla, 4.5rem = máximo */
-            
-            color: #fff;
-            /* Blanco puro */
-            
-            /* SOMBRA DE TEXTO - Efecto de profundidad */
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7), 
-                         -2px -2px 8px rgba(76, 255, 200, 0.3);
-            /* Primera sombra: negra oscura, Segunda: cian claro */
-            
-            font-weight: 700;
-            /* Texto muy grueso/bold */
-            letter-spacing: 2px;
-            /* Espacio entre letras */
-            margin-bottom: 10px;
-            animation: fadeIn 1.2s ease-in;
-            /* Aplica animación que reaparece suavemente en 1.2 segundos */
-        }
-
-        /* SUBTÍTULO DEL HERO */
-        .hero-title p {
-            font-size: clamp(0.9rem, 3vw, 1.3rem);
-            color: #4cffcc;
-            /* Cian/aguamarina claro */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-            font-weight: 300;
-            /* Texto delgado */
-            animation: fadeIn 1.5s ease-in;
-            /* Mismo efecto pero con retraso de 0.3s respecto al h1 */
-        }
-
-        /* ANIMACIÓN FADEÍN - Desvanecer entrada */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                /* Comienza invisible */
-                transform: translateY(20px);
-                /* Comienza 20px más abajo */
-            }
-            to {
-                opacity: 1;
-                /* Termina visible */
-                transform: translateY(0);
-                /* Vuelve a posición normal */
-            }
-        }
-
-        /* ========== CONTENEDOR GENERAL ========== */
-        .container {
-            max-width: 1200px;
-            /* Máximo ancho para que no quede demasiado ancho en pantallas grandes */
+        .hero-container {
+            max-width: 1600px;
             margin: 0 auto;
-            /* Centra horizontalmente */
-            padding: 0 20px;
-            /* Espacios laterales en dispositivos pequeños */
         }
 
-        /* ========== SECCIÓN DISCLAIMER (ACLARACIONES) ========== */
-        .disclaimer {
-            margin: 80px auto;
-            /* 80px arriba y abajo, centrado */
-            padding: 40px;
-            /* Espacio interno */
-            
-            /* FONDO GRADIENTE CON TRANSPARENCIA */
-            background: linear-gradient(135deg, rgba(100, 50, 150, 0.2), rgba(76, 255, 200, 0.1));
-            /* Morado y cian semi-transparentes */
-            
-            border-left: 5px solid #9d4edd;
-            /* Borde izquierdo grueso morado - efecto visual */
-            border-radius: 8px;
-            /* Esquinas redondeadas */
-            
-            backdrop-filter: blur(10px);
-            /* Efecto vidrio esmerilado (desenfoque de fondo) */
-            border: 1px solid rgba(157, 78, 221, 0.3);
-            /* Borde sutil morado */
-            
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* TÍTULO DEL DISCLAIMER */
-        .disclaimer h2 {
-            color: #9d4edd;
-            /* Morado */
-            margin-bottom: 15px;
-            /* Espacio debajo */
-            font-size: 1.8rem;
-        }
-
-        /* PÁRRAFO DEL DISCLAIMER */
-        .disclaimer p {
-            color: #c0c0c0;
-            /* Gris claro */
-            font-size: 1rem;
-            line-height: 1.8;
-            /* Más espacio entre líneas para legibilidad */
-        }
-
-        /* ========== SECCIÓN DE GIFS CON VIDEO ========== */
-        .gifs-section {
-            margin: 100px 0;
-            /* Espacios arriba y abajo */
-        }
-
-        /* GRID/REJILLA DE GIFS */
-        .gifs-grid {
-            display: grid;
-            /* Usa sistema de grid (cuadrículas) */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            /* Repite columnas de mínimo 280px, máximo lo que quede disponible */
-            /* auto-fit = responsivo automáticamente */
-            gap: 40px;
-            /* Espacio entre elementos */
-            margin-top: 50px;
-        }
-
-        /* TARJETA INDIVIDUAL DE GIF */
-        .gif-card {
-            cursor: pointer;
-            /* Cambia cursor a mano (indica que es clickeable) */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Anima cambios de posición y sombra suavemente en 0.3s */
-            animation: slideUp 0.6s ease-out;
-            /* Animación de entrada */
-        }
-
-        /* ANIMACIÓN SLIDEUP - Deslizar hacia arriba */
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                /* Comienza invisible */
-                transform: translateY(30px);
-                /* Comienza 30px más abajo */
-            }
-            to {
-                opacity: 1;
-                /* Termina visible */
-                transform: translateY(0);
-                /* Posición normal */
-            }
-        }
-
-        /* EFECTO HOVER (al pasar el mouse) EN LA TARJETA */
-        .gif-card:hover {
-            transform: translateY(-10px);
-            /* Sube la tarjeta 10px */
-            box-shadow: 0 20px 40px rgba(157, 78, 221, 0.4);
-            /* Sombra grande morada */
-        }
-
-        /* CONTENEDOR DEL GIF */
-        .gif-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            /* Oculta contenido que sale, importante para esquinas redondeadas */
-            border-radius: 12px;
-            border: 2px solid rgba(76, 255, 200, 0.3);
-            /* Borde cian semi-transparente */
-            background: linear-gradient(135deg, #1a0033, #0d2e2e);
-            /* Fondo degradado morado-azul */
-        }
-
-        /* OVERLAY OSCURO EN HOVER (pseudo-elemento ::before) */
-        .gif-container::before {
-            content: '';
-            /* Crea un elemento invisible */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /* Cubre toda el área */
-            background: rgba(157, 78, 221, 0.1);
-            /* Capa morada muy transparente */
-            opacity: 0;
-            /* Comienza invisible */
-            transition: opacity 0.3s ease;
-            z-index: 5;
-            /* Aparece entre el gif y el botón play */
-        }
-
-        /* MOSTRAR EL OVERLAY CUANDO SE HACE HOVER EN LA TARJETA */
-        .gif-card:hover .gif-container::before {
-            opacity: 1;
-            /* Aparece visible */
-        }
-
-        /* ICONO DE PLAY (BOTÓN PARA VER VIDEO) */
-        .play-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            /* Centra el icono */
-            transform: translate(-50%, -50%);
-            width: 70px;
-            height: 70px;
-            background: rgba(157, 78, 221, 0.9);
-            /* Fondo morado opaco */
-            border-radius: 50%;
-            /* Forma circular */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 6;
-            /* Aparece sobre el overlay */
-            opacity: 0;
-            /* Comienza invisible */
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 0 30px rgba(76, 255, 200, 0.5);
-            /* Brillo cian alrededor */
-        }
-
-        /* MOSTRAR PLAY ICON EN HOVER */
-        .gif-card:hover .play-icon {
-            opacity: 1;
-            /* Aparece visible */
-            transform: translate(-50%, -50%) scale(1.1);
-            /* Se agranda un 10% */
-        }
-
-        /* TRIÁNGULO DE PLAY (SÍMBOLO ▶) */
-        .play-icon::after {
-            content: '▶';
-            /* Carácter Unicode de triángulo play */
-            color: #fff;
-            font-size: 1.8rem;
-            margin-left: 4px;
-            /* Centra un poco el triángulo */
-        }
-
-        /* IMAGEN DEL GIF */
-        .gif-image {
-            width: 100%;
-            height: auto;
-            /* Mantiene proporción original */
-            display: block;
-            border-radius: 12px;
-        }
-
-        /* CONTENEDOR DE TEXTO DEBAJO DEL GIF */
-        .gif-text {
-            margin-top: 20px;
+        .hero-title h1 {
             text-align: center;
+            font-size: clamp(7rem, 7vw, 11rem); 
+            color: var(--newp);
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            font-family: 'PacayaMedium';
+            font-weight: bold;
+            font-style: normal;
         }
 
-        /* TÍTULO DE LA TARJETA */
-        .gif-text h3 {
-            color: #4cffcc;
-            /* Cian */
-            font-size: 1.3rem;
-            margin-bottom: 8px;
+        .hero-title h4 {
+            text-align: center;
+            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            color: var(--text-dark);
+            font-family: 'opendyslexic';
+            font-weight: bold;
+            font-style: normal;
         }
 
-        /* DESCRIPCIÓN DE LA TARJETA */
-        .gif-text p {
-            color: #a0a0a0;
-            /* Gris */
-            font-size: 0.95rem;
+        .hero-title h5 {
+            text-align: center;
+            font-size: clamp(1rem, 2vw, 2rem);
+            color: var(--text-dark);
+            margin: 0 0 1.5rem 0;
+            font-family: 'opendyslexic';
+            font-weight: bold;
+            font-style: normal;
         }
 
-        /* ========== MODAL PARA VER VIDEOS EN PANTALLA COMPLETA ========== */
-        
-        /* FONDO OSCURO DEL MODAL */
-        .modal {
-            display: none;
-            /* Comienza oculto */
-            position: fixed;
-            /* Se queda fijo en pantalla aunque hagas scroll */
-            z-index: 1000;
-            /* Nivel muy alto, aparece sobre todo */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            /* Fondo negro semi-transparente */
-            animation: fadeIn 0.3s ease;
+        .hero-title h6 {
+            ext-align: left;
+            font-size: clamp(4rem, 2vw, 4rem);
+            color: var(--text-dark);
+            margin: 0 0 1.5rem 0;
+            font-family: 'opendyslexic';
+            font-weight: bold;
+            font-style: normal;
         }
-
-        /* MOSTRAR EL MODAL */
-        .modal.show {
-            display: flex;
-            /* Cambiar a visible */
-            align-items: center;
-            justify-content: center;
-            /* Centra el contenido */
-        }
-
-        /* CAJA DEL MODAL (EL VIDEO Y SU MARCO) */
-        .modal-content {
+    
+        .hero-video-wrapper {
             position: relative;
-            width: 90%;
-            /* 90% del ancho de la pantalla */
-            max-width: 900px;
-            /* Pero máximo 900px */
-            max-height: 85vh;
-            /* Máximo altura 85% de la pantalla */
-            background: #0a0a0a;
-            /* Fondo negro puro */
-            border-radius: 12px;
-            overflow: hidden;
-            /* Oculta contenido que sale de las esquinas redondeadas */
-            box-shadow: 0 0 50px rgba(157, 78, 221, 0.8);
-            /* Sombra morada intensa */
-            animation: slideDown 0.3s ease;
-            /* Animación de entrada */
-        }
-
-        /* ANIMACIÓN SLIDEDOWN - Deslizar hacia abajo */
-        @keyframes slideDown {
-            from {
-                transform: translateY(-50px);
-                /* Comienza 50px arriba */
-                opacity: 0;
-                /* Invisible */
-            }
-            to {
-                transform: translateY(0);
-                /* Baja a posición normal */
-                opacity: 1;
-                /* Visible */
-            }
-        }
-
-        /* VIDEO DENTRO DEL MODAL */
-        .modal-video {
             width: 100%;
+            border-radius: 8px;
+        }
+
+        .hero-video-wrapper iframe {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
             height: auto;
             display: block;
+            border: none;
+            border-radius: 0;
         }
 
-        /* BOTÓN CERRAR MODAL (X) */
-        .close-modal {
-            position: absolute;
-            /* Se coloca en la esquina del modal */
-            top: 15px;
-            right: 20px;
-            color: #fff;
-            font-size: 2rem;
-            cursor: pointer;
-            z-index: 1001;
-            /* Aparece sobre el video */
-            background: rgba(157, 78, 221, 0.8);
-            /* Fondo morado */
-            width: 45px;
+        /* Título sobre el video */
+        .hero-title {
+            text-align: center;
+            background: transparent;
+            position: relative;
+            z-index: 2;
+            margin: 0 2rem 1.5rem 2rem; 
+            padding: 0;
             
+        }
+
+    /* ========== CÓMO SE HIZO (TEXTO PEQUEÑO) ========== */
+    .how-it-was-made {
+        background-color: var(--purple-med);
+        color: var(--text-dark);
+        padding: 1.5rem 2rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .how-it-was-made h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--yellow);
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* ========== DISCLAIMER ========== */
+    .disclaimer {
+        background: linear-gradient(90deg, var(--purple-dark), var(--purple-med));
+        color: var(--text-light);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-left: 5px solid var(--yellow);
+        border-radius: 4px;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .disclaimer h3 {
+        font-size: 3.2rem;
+        margin-bottom: 0.5rem;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .disclaimer h3::before {
+        content: "⚠️ ";
+    }
+
+    .disclaimer p {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* ========== SECCIONES GIF + VIDEO ========== */
+    .media-section {
+        display: grid;
+        grid-template-columns: 5fr;
+        gap: 2rem;
+        margin: 3rem 0;
+        padding: 2rem;
+        background-color: var(--purple-light);
+        border-radius: var(--border-radius);
+        border-top: 3px solid var(--purple-dark);
+        align-items: stretch;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .media-section.reverse {
+        direction: rtl;
+    }
+
+    .media-section.reverse > * {
+        direction: ltr;
+    }
+
+    .gif-clickable {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+    }
+
+    .gif-clickable:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(107, 75, 163, 0.3);
+    }
+
+    .gif-clickable img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        transition: var(--transition);
+        object-fit: cover; 
+        object-position: center;
+    }
+
+    .gif-clickable:hover img {
+        opacity: 0.8;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background-color: var(--bg-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        opacity: 0;
+        transition: var(--transition);
+        box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+    }
+
+    .gif-clickable:hover .play-btn {
+        opacity: 1;
+    }
+
+    .video-incrustado {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+        order: -1;
+    }
+
+    .video-incrustado.active {
+        display: block;
+    }
+
+    .video-incrustado iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .media-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .media-info h3 {
+        font-size: 1rem;
+        color: var(--text-dark);
+        border-bottom: 2px solid var(--yellow);
+        padding-bottom: 0.5rem;
+        line-height: 1.4;
+        order: 1;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .media-info p {
+        font-size: 0.85rem;
+        color: var(--text-dark);
+        line-height: 1.5;
+    }
+
+    .click-hint {
+        background-color: var(--purple-light);
+        color: var(--text-dark);
+        padding: 0.8rem 1rem;
+        border-left: 3px solid var(--yellow);
+        border-radius: 4px;
+        font-size: 0.90rem;
+        font-weight: 500;
+        order: 2;
+    }
+
+    .click-hint strong {
+        color: var(--text-dark);
+    }
+
+    /* ========== SECCIONES DE TEXTO ========== */
+    .text-section {
+        background-color: var(--purple-dark);
+        padding: 2rem;
+        margin: 3rem 0;
+        border-left: 4px solid var(--purple-light);
+        border-radius: 4px;
+    }
+
+    .text-section h2 {
+        color: var(--yellow);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .text-section p {
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* ========== MODAL PARA VIDEOS ========== */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .modal.active {
+        display: flex;
+    }
+
+    .modal-content {
+        position: relative;
+        width: 100%;
+        max-width: 85vw;  /* AUMENTADO: de 800px a 95vw */
+        aspect-ratio: 16/9;
+        background: #000;
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: var(--border-radius);
+    }
+
+    .close-modal {
+        position: absolute;
+        top: -45px;
+        right: 0;
+        color: white;
+        font-size: 36px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+        transition: color 0.3s ease;
+    }
+
+    .close-modal:hover {
+        color: var(--yellow);
+    }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .modal {
+        padding: 0.5rem;
+    }
+
+    .modal-content {
+        max-width: 100vw;
+    }
+
+    .close-modal {
+        top: -40px;
+        font-size: 30px;
+    }
+}
+
+
+    /* ========== ENLACES RECOMENDADOS ========== */
+    .recommendations {
+        background: linear-gradient(135deg, var(--purple-dark), var(--purple-med));
+        padding: 3rem 2rem;
+        margin-top: 3rem;
+        border-radius: var(--border-radius);
+    }
+
+    .recommendations h2 {
+        color: var(--yellow);
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .link-card {
+        background-color: var(--white);
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        color: var(--purple-dark);
+        transition: var(--transition);
+        border: 2px solid transparent;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .link-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--text-light), var(--purple-dark));
+        transition: left 0.4s ease;
+        z-index: -1;
+    }
+
+    .link-card:hover {
+        transform: translateY(-6px);
+        color: var(--text-dark);
+        box-shadow: 0 8px 16px rgba(107, 75, 163, 0.3);
+    }
+
+    .link-card:hover::before {
+        left: 0;
+    }
+
+    .link-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        font-family: 'PacayaMedium';
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .link-card p {
+        font-size: 0.85rem;
+        opacity: 0.85;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+        .media-section {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-title h1 {
+            font-size: 1.8rem;
+        }
+
+        .recommendations h2 {
+            font-size: 1.4rem;
+        }
+
+        .hero-video-wrapper {
+            max-width: 100%;
+        }
+
+        .modal-content {
+            max-width: 95vw;
+        }
+
+        .close-modal {
+            top: -40px;
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-section {
+            padding: 2rem 0.5rem 1rem;
+        }
+
+        .hero-title h1 {
+            font-size: 1.2rem;
+            padding: 1rem;
+        }
+    }
+
+    /* Estado inicial - invisible */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado cuando entra en vista - visible */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animaciones alternativas (opcionales) */
+
+/* Slide desde la izquierda */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+    
+</style>
+
+<!-- ====================================
+     SECCIÓN HERO - VIDEO PRINCIPAL
+     ==================================== -->
+
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-video-wrapper">
+        <h6><strong>RECOMENDACIÓN:</strong> Ver desde computador o celular con vista en horizontal</h6>
+      <div class="hero-title">
+        <h1>Ecos de fentanilo</h1>
+        <h4>Tendencias y patrones en la cobertura mediática del fentanilo en Colombia entre 2016 y 2024</h4>
+      </div>
+
+      <iframe
+        src="https://veedeo.org/videos/embed/52QTzfUGEsN6rQpiBKuQek?loop=1&amp;autoplay=1&amp"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        title="Video principal">
+      </iframe>
+    </div>
+  </div>
+</section>
+<div class="container">
+
+    <!-- ====================================
+         CÓMO SE HIZO (TEXTO PEQUEÑO)
+         ==================================== -->
+    <div class="how-it-was-made fade-in">
+        <a href="https://github.com/Dajovizgra" target="_blank" rel="noopener noreferrer">
+            <h5>Por Sebastián Acosta Nieto</h5>
+        </a>          
+     </div>
+    
+    <div class="how-it-was-made">
+        <h2>¿Cómo se hizo este video?</h2>
+        <p>Análisis de similitud de co-ocurrencias, casos en que dos o más palabras aparecen juntas en un texto, hecho usando Sklearn y visualización hecha con NetworkX, librerías de Python.</p>
+    </div>
+
+    <!-- ====================================
+         DISCLAIMER
+         ==================================== -->
+    <section class="disclaimer fade-in">
+        <h3>Importante</h3>
+        <p>Este es un proyecto independiente desarrollado con el propósito de poner en práctica herramientas de análisis de datos y análisis textual, aplicadas a un tema de alto interés público: la forma en que los medios de comunicación han abordado el fentanilo en Colombia.</p>
+
+        <p>La información aquí presentada fue recopilada y organizada entre 2024 y 2026, a partir de publicaciones periodísticas difundidas entre 2016 y 2024. El objetivo de este trabajo es ofrecer una lectura exploratoria sobre los discursos, énfasis y tendencias mediáticas alrededor del tema.</p>
+        <p>Sé muy bien que desde el 2024, que es hasta el año de donde se extrajo la información, hasta el 2026, fecha en donde se publica este proyecto, en un espacio de tiempo importante y son 2 años en donde probablemente se han publicado mucha más información respecto al tema. Hubiera querido publicar esto mucho tiempo antes pero cuestiones personales no me permitieron hacerlo.</p>
+        <p>Este proyecto no pretende presentarse como una investigación definitiva ni cerrar la discusión. Por el contrario, busca abrir un espacio de consulta, reflexión y conversación pública. Por eso, los datos, archivos y resultados asociados se comparten de manera abierta, para que puedan ser revisados, contrastados, corregidos o complementados por personas interesadas, especialmente por quienes cuenten con mayor experiencia en el tema.</p>
+        <p>Agradezco cualquier observación, corrección o aporte que permita fortalecer este trabajo y seguir mejorando su calidad, alcance y utilidad pública.</p>
+    </section>
+
+    <!-- ====================================
+         PRIMER GIF + VIDEO
+         ==================================== -->
+    <section class="media-section slide-in-left">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/4To42TxrwXGKijkMVwCo5s?loop=1&amp;autoplay=1&amp')">
+            <img src="1.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section zoom-in">
+        <p><strong>¿Qué es el fentanilo?</strong></p>
+        <p>“El fentanilo y compuestos similares llamados análogos, tal como el carfentanilo, son opioides sintéticos extremadamente fuertes. El carfentanilo es considerado hasta 100 veces más potente que el fentanilo, que es de 50 a 100 veces más fuerte que la morfina. Médicamente, se usan para tratar el dolor intenso o para controlar el dolor después de una cirugía. El fentanilo se usa también para tratar a pacientes con dolor crónico que han desarrollado tolerancia a otros opioides.”
+        <a href="https://drugfree.org/articulo/fentanilo/" target="_blank" rel="noopener noreferrer"> <strong>Fentanilo: lo que las Familias Deben Saber para Proteger a sus Seres Queridos.</strong></p>  
+        </a>
+        <p>“Los médicos pueden recetar un opioide para tratar el dolor, pero también se fabrica ilegalmente y se vende como droga callejera.”
+        <a href="https://kidshealth.org/es/parents/drugs-fentanyl.html" target="_blank" rel="noopener noreferrer"> <strong>¿Qué es el fentanilo.</strong></p>
+        </a>
+        <p><strong>______________________________________________________________________________________________________________________</strong></p>
+        <h2>Contexto del Fentanilo en Colombia</h2>
+        <p>Desde el 2016 existe un boom noticioso relacionado al fentanilo que tomó fuerza debido a algunas situaciones como: las emergencias generadas por consumo, sobredosis y muertes en Canadá y EE.UU. Cada una con características propias de su contexto y cultura; visibilización de los consumidores mientras se encuentran bajo el efecto de la sustancia; aumento de su presencia en el mercado ilícito; combinaciones peligrosas con otras sustancias; noticias criminales entorno a la sustancia y supuestas aperturas de nuevos mercados.</p>
+    </section>
+
+    <!-- ====================================
+         SEGUNDO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/4rpvRYJSPbanEXtuprveQk?loop=1&amp;autoplay=1&amp')">
+            <img src="2.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>Es una herramienta discursiva que emplea la desinformación como gran aliada para seguir promoviendo los enfoques punitivos sobre las sustancias ilegales, poniéndolas a todas en una misma bolsa sin distinguir el amplio espectro que existe. Se apuesta por el miedo y la represión bajo una máscara de “preocupación por la comunidad” y de necesidad de “más seguridad”, incluso al punto de ir en contra de la evidencia y los datos de lxs profesionales y organizaciones que saben del tema y lo trabajan.</p>
+    </section>
+
+    <!-- ====================================
+         TERCER GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/e7uFjeoqssT8YxskzEVw1p?loop=1&amp;autoplay=1&amp')">
+            <img src="3.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>Teniendo todo esto en cuenta se plantea la necesidad de realizar la segunda parte de este análisis descriptivo y exploratorio desde Colombia. Pese a que no es un país que se haya visto realmente afectado por la problemática relacionada al consumo no controlado de fentanilo, se usa al aparato mediático y a la desinformación como formas de avivar el mensaje de miedo y rechazo a las drogas, especialmente hacia las personas usuarias de drogas y eslabones más vulnerables de la cadena de distribución.</p>
+        <p>Se busca controlar a la gente por medio del pánico generado y a la vez se ocultan problemas más urgentes en los territorios, en todo el planeta como la desigualdad, falta de oferta en estrategias basadas en derechos humanos, militarización y violencia, entre otros tantos.</p>
+        <p><strong>La falta de presencia de medios alternativos, independientes y comunitarios en el presente análisis responde a las agendas y decisiones editoriales de esos medios. Mientras que los medios con más alcance a nivel nacional y con sede en ciudades medianas y grandes fueron mucho más activos publicando noticias relacionadas al fentanilo, los medios más pequeños y con un alcance menor responden a sus contextos cercanos, en donde claramente este tema no tiene importancia dentro de sus contenidos.</strong></p>
+    </section>
+
+    <!-- ====================================
+         CUARTO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/iEjhJzPkWAQ69wS3BQcMup?loop=1&amp;autoplay=1&amp')">
+            <img src="4.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+<!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <h2>¿Qué se hizo y cómo?</h2>
+        <p>Se analizó el cubrimiento mediático relacionado al fentanilo entre los años 2016-2024 en Colombia y se identificaron tendencias y patrones significativos mediante el análisis de lenguaje natural de las noticias publicadas por diversos medios en Colombia.
+<strong>¿Qué tipo de impacto pueden tener estas noticias en la percepción pública?</strong>
+</p>
+    </section>
+
+    <!-- ====================================
+         QUINTO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/j1VhApEZ9ULTxJCQvBWY4U?loop=1&amp;autoplay=1&amp')">
+            <img src="5.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>Se hizo el preprocesamiento y procesamiento de la base de datos de noticias extraídas utilizando Python, mediante el uso de librerías y herramientas especialzadas en web scraping, procesamiento del lenguaje natural, análisis de tópicos y extracción de las entidades más nombradas. Esto incluyó la extracción de datos relevantes, limpieza y normalización de los datos.</p>
+    </section>
+
+    <!-- ====================================
+         SEXTO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/n7qeJG4ooWRoetXmT8tQVo?loop=1&amp;autoplay=1&amp')">
+            <img src="6.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>Para ver cuáles son las palabras que más se repiten dentro de los titulares y dentro del cuerpo de las noticias se creó una nube. Se repite lo que se observó en la primera parte de este ejercicio de análisis, las palabras que más se usan están relacionadas a la punitividad, la seguridad, el crimen, el negocio y la muerte.</p>
+        <p>Aunque en la nube de palabras hecha con el cuerpo de las noticias se logran colar de manera discreta palabras como médico, medicamento y salud, si se van leyendo las palabras, de las más grandes a las más pequeñas, la impresión que queda es el reflejo de la realidad del discurso que viene predominando:</p>
+    <p><strong>Esta es una droga ilegal producida en México y China hecha con sintéticos traídos de Asia que afecta a las personas de Estados Unidos, principalmente. Una gran simplificación de un tema con varias capas de complejidad.</strong></p>
+    <p>Las demás realidades que hacen parte de este tema tan amplio quedan ocultas para poder justificar acciones de Estados Unidos en contra de otros países en el mundo, alegando seguridad y defensa. Como lo que pasó con los aranceles económicos en contra México, Canadá y China para combatir el tráfico de fentanilo y lo más actual, el bombardeo de lanchas y embarcaciones en el Caribe y en el Pacífico para impedir la entrada de cocaína a su territorio.</p>
+    </section>
+
+    <!-- ====================================
+         SÉPTIMO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/6AUP5RhXfTbSD1NTB1vKRe?loop=1&amp;autoplay=1&amp')">
+            <img src="7.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>El tema más representado gira alrededor de las palabras México, unidos, cartel, estadounidense y Trump. Un reflejo en los medios del discurso que dicta Estados Unidos; responsabilizando a todos los demás por sus problemas de consumo, sobredosis y muerte, deshaciéndose completamente de las responsabilidades que tiene con sus habitantes.</p>
+        <p>El segundo se asocia a las palabras fentanilo, sobredosis, droga, opioide y muerte y el tercero a fentanilo, droga, heroína, sobredosis y persona.</p>
+        <h2>¿Como se habló del fentanilo en Colombia? Se dijo que es una droga opioide que causa sobredosis y muerte, solo eso, no existe más.</h2>
+        <p>Del fentanilo solo se dijo que es una droga x veces más potente que la heroína y que mata. Poco se habló de que usos tiene a nivel médico, ni como ha ayudado a muchas personas a sobrellevar el dolor y sus últimos momentos de vida.</p>
+        <p>También fueron pocas las menciones sobre lo que están haciendo muchas personas en varios países para evitar que las personas se mueran por su consumo fuera del entorno médico, más allá de estigmatizar, arrestar y judicializar.</p>
+        <p>Las palabras oficial, vehículo, agente y fronterizo en el quinto tópico más representado, son otro reflejo del discurso y de las políticas en contra de la migración hacia Estados Unidos desde el sur, con el supuesto objetivo de combatir las drogas y el crimen, sin importar las decisiones que deban tomarse o las personas que mueran en el proceso.</p>
+    </section>
+
+    <!-- ====================================
+         OCTAVO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/f5rXvH3snGVMMW5XTzMTVC?loop=1&amp;autoplay=1&amp')">
+            <img src="9.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>Las palabras oficial, vehículo, agente y fronterizo en el quinto tópico más representado, son otro reflejo del discurso y de las políticas en contra de la migración hacia Estados Unidos desde el sur, con el supuesto objetivo de combatir las drogas y el crimen, sin importar las decisiones que deban tomarse o las personas que mueran en el proceso.</p>
+    </section>
+
+    <!-- ====================================
+         NOVENO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/cBpVPJCAZi9Ay6zy4jXag8?loop=1&amp;autoplay=1&amp')">
+            <img src="10.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>Washington como el centro del poder y toma de decisiones en Estados Unidos, Europa como otro posible mercado para la sustancia y China - Asia como proveedor químico.</p>
+        <p><strong>¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad?</strong></p>
+    </section>
+
+    <!-- ====================================
+         DÉCIMO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/nS2DoTXZjt3wESfAK9LTDf?loop=1&amp;autoplay=1&amp')">
+            <img src="11.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>La ONU (Organización de las Naciones Unidas) y los CDC (Centros para el Control y la Prevención de Enfermedades) de Estados Unidos fueron las organizaciones más nombradas dentro de la información recolectada. En primer lugar, una organización que ha estado de cerca en la fiscalización y restricción de las drogas ilegales en el mundo y en segundo lugar, la agencia nacional de salud pública de Estados Unidos.</p>
+        <p>De un lado está representada la prohibición de las sustancias en las últimas décadas y del otro lado la salud, dos cosas que son claramente contradictorias para los críticos de la guerra contra las drogas y las personas que apoyan la reforma a la política de drogas a nivel mundial. La salud nunca ha sido el verdadero objetivo cuando se habla de prohibir la oferta y consumo de sustancias ilegales, miles de personas han muerto y siguen muriendo bajo ese lema.</p>
+    </section>
+
+    <!-- ====================================
+         ONCEAVO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/aS8BYqVB4vM5rzSbKKQcZf?loop=1&amp;autoplay=1&amp')">
+            <img src="12.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         DOCEAVO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/oaWdyJSZD4SS9vkvvnmvVh?loop=1&amp;autoplay=1&amp')">
+            <img src="13.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="text-section">
+        <p>Todos los aportes que ha hecho el fentanilo en ámbitos médicos quedan totalmente invisibilizados y la información que de verdad pudo haber ayudado a educar y prevenir sobre sus peligros fuera del entorno médico, quedaron sepultados sobre cientos de noticias que solo buscaron generalizar una tendencia de alarma y miedo sin tener en cuenta que el contexto colombiano, incluso el sudamericano, es diferente al de América del Norte.</p>
+        <p>Aunque eso no asegura que Sudamérica esté el todo blindada contra una posible emergencia por consumo de fentanilo por fuera del ámbito médico, es una realidad que por ahora no está pasando. Son los medios de comunicación masivos los que han intentado imponer esa realidad desde sus editoriales e intereses particulares.</p>
+    </section>
+
+    <!-- ====================================
+         TRECEAVO GIF + VIDEO
+         ==================================== -->
+    <section class="media-section">
+        <!-- GIF CLICKEABLE (LADO IZQUIERDO) -->
+        <div class="gif-clickable" onclick="openModal('https://veedeo.org/videos/embed/hQfKhuqKjzehEb5BikBdtx?loop=1&amp;autoplay=1&amp')">
+            <img src="14.gif" alt="Vista previa del video - Análisis de fentanilo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- INFO Y HINT (LADO DERECHO) -->
+        <div class="media-info">
+            <div class="click-hint">
+                <strong>💡 Haz clic</strong> en el gif para ver el video con sonido
+            </div>
+            <p>Dibujos y animación hechos con Krita. Edición final del video hecha con ShotCut.</p>
+        </div>
+    </section>
+
+    <!-- ====================================
+         SECCIÓN DE TEXTO
+         ==================================== -->
+    <section class="recommendations">
+        <h2>Enlaces recomendados</h2>
+        <div class="links-grid">
+            <a href="https://github.com/Dajovizgra/Tendencias-y-patrones-en-la-cobertura-medi-tica-del-fentanilo-Colombia-2016---2024" class="link-card" target="_blank" rel="noopener noreferrer">
+            <h3>Repositorio en Github del proyecto.</h3>
+            </a>    
+        </div               >
+    </section>
+
+    <!-- ====================================
+         ENLACES RECOMENDADOS
+         ==================================== -->
+    <section class="recommendations">
+        <h2>Enlaces contra la desinformación y el miedo</h2>
+        <div class="links-grid">
+            <a href="https://cesed.uniandes.edu.co/mas-alla-del-miedo-que-es-el-fentanilo/" class="link-card" target="_blank" rel="noopener noreferrer">
+                <h3>Más allá del miedo: ¿qué es el fentanilo? Serie de documentos temáticos sobre fentanilo.</h3>
+                <p>Centro de Estudios sobre seguridad y drogas. Universidad de Los Andes.</p>
+            </a>
+
+            <a href="https://cesed.uniandes.edu.co/mas-alla-del-miedo-oferta-y-demanda-del-fentanilo-en-las-americas/" class="link-card" target="_blank" rel="noopener noreferrer">
+                <h3>Más allá del miedo: ¿qué es el fentanilo? Oferta y demanda de fentanilo en las Américas.</h3>
+                <p>Centro de Estudios sobre seguridad y drogas. Universidad de Los Andes.</p>
+            </a>
+
+            <a href="https://portalderevistas.ufv.es/index.php/comunicacionyhombre/article/view/768" class="link-card" target="_blank" rel="noopener noreferrer">
+                <h3>Portal de revistas</h3>
+                <p>El discurso del miedo: por qué nos convence más la emoción que la razón</p>
+            </a>
+
+            <a href="https://razonpublica.com/apocalipsis-del-fentanilo-peligro-real/" class="link-card" target="_blank" rel="noopener noreferrer">
+                <h3>Razón pública</h3>
+                <p>El apocalipsis del fentanilo: ¿un peligro real?</p>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<!-- ====================================
+     7. MODAL PARA REPRODUCIR VIDEOS
+     ==================================== -->
+<div class="modal" id="videoModal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <iframe id="modalVideo" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+    // Abrir modal con video
+    function openModal(videoUrl) {
+        event.stopPropagation();
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('modalVideo');
+        iframe.src = videoUrl + '?autoplay=1&loop=1';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Cerrar modal
+    function closeModal() {
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('modalVideo');
+        modal.classList.remove('active');
+        iframe.src = '';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Cerrar modal al hacer click fuera del contenedor
+    document.getElementById('videoModal').addEventListener('click', function(event) {
+        if (event.target === this) {
+            closeModal();
+        }
+    });
+
+    // Cerrar modal con tecla ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    const observerOptions = {
+      threshold: 0.1,  // Activa cuando el 10% del elemento es visible
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+    // Si el elemento entra en vista
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } 
+    // Si el elemento sale de vista
+        else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, observerOptions);
+
+// Observar todos los elementos con la clase fade-in
+document.querySelectorAll('.fade-in, .slide-in-left, .zoom-in').forEach(element => {
+  observer.observe(element);
+});
+
+    
+</script>
+
+</body>
+</html>
 
