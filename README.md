@@ -3,13 +3,15 @@ Segunda parte del proyecto  Analisis-de-titulares-fentanilo-2016-2024
 
 ## Disclaimer
 
-Este es un proyecto a nivel personal en donde quise poner en práctica el conocimiento que he adquirido relacionado al análisis de datos y análisis de texto, además de trabajar un tema que me toca de cerca que son las sustancias psicoactivas.
+Este es un proyecto independiente desarrollado con el propósito de poner en práctica herramientas de análisis de datos y análisis textual, aplicadas a un tema de alto interés público: la forma en que los medios de comunicación han abordado el fentanilo en Colombia.
 
-No soy experto, ni especialista en el tema de datos pero, todo el trabajo realizado fue con la mayor entrega y esfuerzo posible.
+La información aquí presentada fue recopilada y organizada entre 2024 y 2026, a partir de publicaciones periodísticas difundidas entre 2016 y 2024. El objetivo de este trabajo es ofrecer una lectura exploratoria sobre los discursos, énfasis y tendencias mediáticas alrededor del tema.
 
 Sé muy bien que desde el 2024, que es hasta el año de donde se extrajo la información, hasta el 2026, fecha en donde se publica este proyecto, en un espacio de tiempo importante y son 2 años en donde probablemente se han publicado mucha más información respecto al tema. Hubiera querido publicar esto mucho tiempo antes pero cuestiones personales no me permitieron hacerlo.
 
-Teniendo en cuenta lo anterior, invito a aquellas personas que tienen más conocimientos en este tema a que revisen el proyecto y que lo complementen con todo lo que a mi se me pudo haber pasado o que por favor corrijan si me equivoqué en algo. He compartido absolutamente todos los archivos relacionados a este proyecto con ese objetivo, para que siga siendo trabajado y mejorado por cualquier persona que quiera.
+Este proyecto no pretende presentarse como una investigación definitiva ni cerrar la discusión. Por el contrario, busca abrir un espacio de consulta, reflexión y conversación pública. Por eso, los datos, archivos y resultados asociados se comparten de manera abierta, para que puedan ser revisados, contrastados, corregidos o complementados por personas interesadas, especialmente por quienes cuenten con mayor experiencia en el tema.
+
+Agradezco cualquier observación, corrección o aporte que permita fortalecer este trabajo y seguir mejorando su calidad, alcance y utilidad pública.
 
 
 # Contexto de la segunda parte del proyecto
@@ -118,7 +120,7 @@ El medio que más publicó fue El tiempo, 338 noticias, le siguen SEMANA con 128
 <img width="1022" height="485" alt="imagen" src="https://github.com/user-attachments/assets/33f2f0ad-b5a9-4dd6-9e3a-8489363e3000" />
 
 
-# Conclusiones
+# Hallazgos
 
 La falta de presencia de medios alternativos, independientes y comunitarios en el presente análisis responde a las agendas y decisiones editoriales de esos medios. Mientras que los medios con más alcance a nivel nacional y con sede en ciudades medianas y grandes fueron mucho más activos publicando noticias relacionadas al fentanilo, los medios más pequeños y con un alcance menor responden a sus contextos cercanos, en donde claramente este tema no tiene importancia dentro de sus contenidos.
 
