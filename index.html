@@ -17,7 +17,7 @@
     
     /* ========== VARIABLES DE COLOR ========== */
     :root {
-        --purple-dark: #7A4DFF;
+        --purple-dark: #A58FCC;
         --purple-med: #C0AEDB;
         --purple-light: #D9CEE9;
         --yellow: #FFD700;
@@ -42,13 +42,13 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: var(--text-dark);
         line-height: 1.6;
-        background: var(--bg-light);
     }
 
     .container {
         max-width: 1000px;
         margin: 0 auto;
         padding: 2rem 1rem;
+        background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
     }
 
         /* ========== SECCIÓN HERO (VIDEO PRINCIPAL) ========== */
@@ -56,7 +56,7 @@
             width: 100%;
             margin: 0;
             padding: 3rem 1rem 2rem;
-            background: var(--bg-light);
+            background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
         }
 
         .hero-container {
@@ -67,7 +67,7 @@
         .hero-title h1 {
             text-align: center;
             font-size: clamp(7rem, 7vw, 11rem); 
-            color: var(--purple-dark);
+            color: var(--newp);
             text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
             font-family: 'PacayaMedium';
             font-weight: bold;
@@ -145,7 +145,7 @@
     .how-it-was-made h2 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
-        color: var(--purple-dark);
+        color: var(--yellow);
         font-family: 'PacayaMedium';
         font-weight: normal;
         font-style: normal;
@@ -153,8 +153,8 @@
 
     /* ========== DISCLAIMER ========== */
     .disclaimer {
-        background: var(--purple-dark);
-        color: var(--bg-light);
+        background: linear-gradient(90deg, var(--purple-dark), var(--purple-med));
+        color: var(--text-light);
         padding: 2rem;
         margin: 2rem 0;
         border-left: 5px solid var(--yellow);
@@ -287,7 +287,7 @@
 
     .media-info h3 {
         font-size: 1rem;
-        color: var(--text-dar);
+        color: var(--text-dark);
         border-bottom: 2px solid var(--yellow);
         padding-bottom: 0.5rem;
         line-height: 1.4;
@@ -328,7 +328,7 @@
     }
 
     .text-section h2 {
-        color: var(--text-dark);
+        color: var(--yellow);
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
         font-family: 'PacayaMedium';
@@ -337,7 +337,7 @@
     }
 
     .text-section p {
-        color: var(--bg-light;
+        color: var(--text-dark);
         margin-bottom: 1rem;
         font-size: 1.2rem;
         line-height: 1.8;
@@ -424,7 +424,7 @@
     }
 
     .recommendations h2 {
-        color: var(--bg-light);
+        color: var(--yellow);
         font-size: 1.8rem;
         margin-bottom: 2rem;
         text-align: center;
@@ -819,6 +819,7 @@
         <h2>¿Como se habló del fentanilo en Colombia? Se dijo que es una droga opioide que causa sobredosis y muerte, solo eso, no existe más.</h2>
         <p>Del fentanilo solo se dijo que es una droga x veces más potente que la heroína y que mata. Poco se habló de que usos tiene a nivel médico, ni como ha ayudado a muchas personas a sobrellevar el dolor y sus últimos momentos de vida.</p>
         <p>También fueron pocas las menciones sobre lo que están haciendo muchas personas en varios países para evitar que las personas se mueran por su consumo fuera del entorno médico, más allá de estigmatizar, arrestar y judicializar.</p>
+        <p>Las palabras oficial, vehículo, agente y fronterizo en el quinto tópico más representado, son otro reflejo del discurso y de las políticas en contra de la migración hacia Estados Unidos desde el sur, con el supuesto objetivo de combatir las drogas y el crimen, sin importar las decisiones que deban tomarse o las personas que mueran en el proceso.</p>
     </section>
 
     <!-- ====================================
@@ -870,7 +871,6 @@
          SECCIÓN DE TEXTO
          ==================================== -->
     <section class="text-section zoom in">
-        <p>Colombia es la locación más nombrada, le sigue Washington, luego Europa, Texas, China, Nueva York y Asia.</p>
         <p>Washington como el centro del poder y toma de decisiones en Estados Unidos, Europa como otro posible mercado para la sustancia y China - Asia como proveedor químico.</p>
         <p><strong>¿Donde queda la información que de verdad aporte algo de importancia y beneficioso para la sociedad?</strong></p>
     </section>
@@ -1081,4 +1081,3 @@ document.querySelectorAll('.fade-in, .slide-in-left, .zoom-in').forEach(element 
 
 </body>
 </html>
-
