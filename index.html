@@ -17,7 +17,7 @@
     
     /* ========== VARIABLES DE COLOR ========== */
     :root {
-        --purple-dark: #A58FCC;
+        --purple-dark: #7A4DFF;
         --purple-med: #C0AEDB;
         --purple-light: #D9CEE9;
         --yellow: #FFD700;
@@ -42,7 +42,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: var(--text-dark);
         line-height: 1.6;
-        background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+        background: var(--bg-light);
     }
 
     .container {
@@ -56,7 +56,7 @@
             width: 100%;
             margin: 0;
             padding: 3rem 1rem 2rem;
-            background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+            background: var(--bg-light);
         }
 
         .hero-container {
@@ -67,7 +67,7 @@
         .hero-title h1 {
             text-align: center;
             font-size: clamp(7rem, 7vw, 11rem); 
-            color: var(--newp);
+            color: var(--purple-dark);
             text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
             font-family: 'PacayaMedium';
             font-weight: bold;
@@ -145,7 +145,7 @@
     .how-it-was-made h2 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
-        color: var(--yellow);
+        color: var(--bg-light);
         font-family: 'PacayaMedium';
         font-weight: normal;
         font-style: normal;
@@ -154,7 +154,7 @@
     /* ========== DISCLAIMER ========== */
     .disclaimer {
         background: linear-gradient(90deg, var(--purple-dark), var(--purple-med));
-        color: var(--text-light);
+        color: var(--bg-light);
         padding: 2rem;
         margin: 2rem 0;
         border-left: 5px solid var(--yellow);
