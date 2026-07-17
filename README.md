@@ -13,6 +13,9 @@ Este proyecto no pretende presentarse como una investigación definitiva ni cerr
 
 Agradezco cualquier observación, corrección o aporte que permita fortalecer este trabajo y seguir mejorando su calidad, alcance y utilidad pública.
 
+## Enlace a la página del proyecto:
+
+- https://dajovizgra.github.io/Tendencias-y-patrones-en-la-cobertura-medi-tica-del-fentanilo-Colombia-2016---2024/
 
 # Contexto de la segunda parte del proyecto
 
