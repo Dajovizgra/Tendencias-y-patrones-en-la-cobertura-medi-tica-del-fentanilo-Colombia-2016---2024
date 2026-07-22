@@ -64,7 +64,7 @@ La siguiente parte del procesamiento del texto se hizo con la librería de pytho
 
 El siguiente paso es la creación de nubes de palabras para ver cuáles son las que más se repiten dentro de los titulares y dentro del cuerpo de las noticias. Se repite lo que se observó en la primera parte de este ejercicio de análisis, las palabras que más se usan están relacionadas a la punitividad, la seguridad, el crimen, el negocio y la muerte.
 
-Aunque en la nube de palabras hecha con el cuerpo de las noticias se logran colar de manera discreta palabras como médico, medicamento y salud, si se van leyendo las palabras, de las más grandes a las más pequeñas, la impresión que queda es el reflejo de la realidad del discurso que viene predominando: Esta es una droga ilegal producida en México y China hecha con sintéticos traídos de Asia que afecta a las personas de Estados Unidos, principalmente. Una gran simplificación de un tema con varias capas de complejidad.
+Aunque en la nube de palabras hecha con el cuerpo de las noticias se logran colar de manera discreta palabras como médico, medicamento y salud, si se van leyendo las palabras, de las más grandes a las más pequeñas, la impresión que queda es el reflejo de la realidad del discurso que viene predominando: Esta es una droga ilegal producida en México y China hecha con sintéticos traídos de Asia que afecta a las personas de Estados Unidos y Canadá, principalmente. Una gran simplificación de un tema con varias capas de complejidad.
 
 <img width="1220" height="500" alt="imagen" src="https://github.com/user-attachments/assets/ceb56a42-98ec-4421-98cb-dc07bfd1e63c" />
 
@@ -91,7 +91,9 @@ Las palabras oficial, vehículo, agente y fronterizo en el quinto tópico más r
 
 El siguiente paso dentro de este análisis consistió en usar el modelo de procesamiento de lenguaje para ver cuáles fueron las entidades más nombradas (localizaciones, personas y organizaciones). 
 
-Colombia, país desde donde se hace este análisis, es la locación más nombrada, le sigue Washington, luego Europa, Texas, China, Nueva York y Asia. Washington como el centro del poder y toma de decisiones en Estados Unidos, Europa como otro posible mercado para la sustancia y China - Asia como proveedor químico.
+Colombia es la locación más nombrada, le sigue Washington, luego Europa, Texas, China, Nueva York y Asia.
+
+Washington como el centro del poder y toma de decisiones en Estados Unidos, uno de los principales afectados por la crisis de fentanilo, Europa como otro posible mercado para la sustancia y China - Asia como proveedor químico.
 
 
 <img width="307" height="311" alt="imagen" src="https://github.com/user-attachments/assets/b17f5987-db59-4713-88b4-516a842d5529" />
@@ -167,5 +169,7 @@ Aunque eso no asegura que Sudamérica esté el todo blindada contra una posible 
     • Federico Rey Lennon. «Credibilidad, miedo y comunicación». Comunicación y Hombre. 2023, nº 19, pp 109-123. DOI: https://doi.org/10.32466/eufv-cyh.2023.19.767.109-123.
     • Fernández Carles (2003). Este contenido ha sido publicado en la sección Artículos Técnicos de Prevención de Riesgos Laborales en Prevention world. https://prevention-world.com/actualidad/articulos-tecnicos/amplificacion-social-riesgo-medios-comunicacion-y-percepcion-riesgo-i-teorias-sociales-riesgo/.
     • Carranza Maribel (2022). América Latina, relaciones políticas internacionales, medios de comunicación. Discriminación. Universidad de Granma. Bayamo MN, Cuba. https://dialnet.unirioja.es/servlet/articulo?codigo=8436933.
+    • Pinzón Gómez Carolina, Cruz López Miguel y Cruz Martín Silvia. Más allá del miedo: Oferta y demanda de fentanilo en las Américas. Facultad de Economía Universidad de los Andes Colombia, Centro de Estudios sobre seguridad y drogas (CESED), Cinvestav. Documento temático #48 (2024). https://cesed.uniandes.edu.co/wp-content/uploads/2024/07/Situacio%CC%81n-de-fentanilo-en-las-ame%CC%81ricas_diagramado.pdf.
+    • Pinzón Gómez Carolina, Cruz López Miguel y Cruz Martín Silvia. Más allá del miedo: ¿Qué es el fentanilo? Facultad de Economía Universidad de los Andes Colombia, Centro de Estudios sobre seguridad y drogas (CESED), Cinvestav. Documento temático #47 (2024). https://cesed.uniandes.edu.co/wp-content/uploads/2024/06/Documento-fentanilo-V2.pdf
     • Salazar Echeagaray, Melissa. La dimensión mediática de la estrategia de miedo y securitización en América Latina. El Cotidiano, núm. 170, 2011, pp. 101-110. Universidad Autónoma Metropolitana Unidad Azcapotzalco, Distrito Federal, México. https://www.redalyc.org/pdf/325/32520935011.pdf.
     • Bonilla Jorge, Tamayo Camilo (2006). Medios de comunicación y violencias en América Latina: preocupaciones, rutas y sentidos. Revista Controversia. https://doi.org/10.54118/controver.v0i187.168.
